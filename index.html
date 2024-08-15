@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clad Framework</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/clad-framework/dist/clad.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+ 
+  </head>
+  <body>
+    <nav class="clad-navbar clad-navbar-expand-lg clad-bg-primary clad-fixed-top">
+        <div class="clad-container">
+          <a class="clad-navbar-brand clad-text-light" href="#">Clad Framework</a>
+          <button class="clad-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="clad-navbar-toggler-icon"></span>
+          </button>
+          <!-- <div class="clad-navbar-collapse clad-collapse" id="navbarContent">
+            <ul class="clad-navbar-nav clad-ml-auto clad-flex-row clad-justify-content-between">
+              <li class="clad-nav-item">
+                <a class="clad-nav-link clad-text-light" href="#home">Home</a>
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link clad-text-light" href="#getting-started">Getting Started</a>
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link clad-text-light" href="#grid-system">Grid System</a>
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link clad-text-light" href="#components">Components</a>
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link clad-text-light" href="#utilities">Utilities</a>
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link clad-text-light" href="#customization">Customization</a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </nav>
+
+      <header id="home" class="hero clad-text-center clad-py-6">
+        <div class="clad-container">
+          <h1 class="clad-mb-4 clad-display-4">Welcome to Clad Framework</h1>
+          <p class="clad-lead clad-mb-5">A powerful, flexible, and lightweight CSS framework for modern web development</p>
+          <a href="#getting-started" class="clad-btn clad-btn-primary clad-btn-lg clad-mr-3 clad-text-light">Get Started</a>
+          <a href="https://github.com/Nextjswebdev/clad_framework" class="clad-btn clad-btn-outline-primary clad-btn-lg">View on GitHub</a>
+        </div>
+      </header>
+
+    <main class="clad-container clad-my-5 clad-pl-5 clad-pr-5">
+      <div class="clad-row">
+        <div class="clad-col-lg-3">
+          <nav class="sidebar">
+            <ul class="clad-nav clad-flex-column">
+              <li class="clad-nav-item">
+                <a class="clad-nav-link" href="#getting-started"
+                  >Getting Started</a
+                >
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link" href="#grid-system">Grid System</a>
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link" href="#components">Components</a>
+                <ul class="clad-nav clad-flex-column clad-ml-3">
+                  <li class="clad-nav-item">
+                    <a class="clad-nav-link" href="#buttons">Buttons</a>
+                  </li>
+                  <li class="clad-nav-item">
+                    <a class="clad-nav-link" href="#forms">Forms</a>
+                  </li>
+                  <li class="clad-nav-item">
+                    <a class="clad-nav-link" href="#cards">Cards</a>
+                  </li>
+                  <li class="clad-nav-item">
+                    <a class="clad-nav-link" href="#alerts">Alerts</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link" href="#utilities">Utilities</a>
+              </li>
+              <li class="clad-nav-item">
+                <a class="clad-nav-link" href="#customization">Customization</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="clad-col-lg-8">
+          <section id="getting-started">
+            <h2>Getting Started with Clad</h2>
+            <p>
+              Clad is a modern CSS framework designed to make web development
+              faster and easier. Follow these steps to get started with Clad in
+              your project:
+            </p>
+
+            <h3>1. Installation</h3>
+            <p>
+              You can install Clad using npm or by including it directly in your
+              HTML file.
+            </p>
+
+            <h4>Option 1: NPM Installation</h4>
+            <div class="code-block">
+              <code>npm install clad-framework</code>
+            </div>
+
+            <h4>Option 2: Direct Link</h4>
+            <p>Add the following link tag to your HTML file:</p>
+            <div class="code-block">
+              <code
+                >&lt;link rel="stylesheet"
+                href="https://unpkg.com/clad-framework/dist/clad.min.css"&gt;</code
+              >
+            </div>
+
+            <h3>2. Basic HTML Structure</h3>
+            <p>Here's a basic HTML template to get you started with Clad:</p>
+            <div class="code-block">
+              <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Clad Project&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://unpkg.com/clad-framework/dist/clad.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="clad-container"&gt;
+        &lt;h1&gt;Welcome to My Clad Project&lt;/h1&gt;
+        &lt;p&gt;This is a basic template using Clad Framework.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <h3>3. Explore Clad's Features</h3>
+            <p>
+              Clad offers a wide range of components and utilities. Explore the
+              documentation to learn more about:
+            </p>
+            <ul>
+              <li>Grid System</li>
+              <li>Typography</li>
+              <li>Buttons</li>
+              <li>Forms</li>
+              <li>Cards</li>
+              <li>Utilities for spacing, colors, and more</li>
+            </ul>
+          </section>
+
+          <div class="section-divider"></div>
+
+          <section id="grid-system">
+            <h2>Grid System</h2>
+            <p>
+              Clad uses a flexible, mobile-first grid system that scales up to
+              12 columns as the device or viewport size increases.
+            </p>
+
+            <h3>Basic Grid Structure</h3>
+            <p>
+              Use <code>clad-row</code> to create horizontal groups of columns.
+              Within the row, add columns using <code>clad-col-*</code> classes.
+            </p>
+
+            <div class="component-demo">
+              <div class="clad-row">
+                <div class="clad-col-sm-4">
+                  <div class="clad-bg-light clad-p-3 clad-text-center">
+                    Column 1
+                  </div>
+                </div>
+                <div class="clad-col-sm-4">
+                  <div class="clad-bg-light clad-p-3 clad-text-center">
+                    Column 2
+                  </div>
+                </div>
+                <div class="clad-col-sm-4">
+                  <div class="clad-bg-light clad-p-3 clad-text-center">
+                    Column 3
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre><code>&lt;div class="clad-row"&gt;
+    &lt;div class="clad-col-sm-4"&gt;Column 1&lt;/div&gt;
+    &lt;div class="clad-col-sm-4"&gt;Column 2&lt;/div&gt;
+    &lt;div class="clad-col-sm-4"&gt;Column 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <h3>Responsive Classes</h3>
+            <p>
+              Clad's grid includes five tiers of predefined classes for building
+              complex responsive layouts. Customize the size of your columns on
+              extra small, small, medium, large, or extra large devices however
+              you see fit.
+            </p>
+
+            <ul>
+              <li>
+                <code>clad-col-*</code> - Extra small devices (portrait phones,
+                less than 576px)
+              </li>
+              <li>
+                <code>clad-col-sm-*</code> - Small devices (landscape phones,
+                576px and up)
+              </li>
+              <li>
+                <code>clad-col-md-*</code> - Medium devices (tablets, 768px and
+                up)
+              </li>
+              <li>
+                <code>clad-col-lg-*</code> - Large devices (desktops, 992px and
+                up)
+              </li>
+              <li>
+                <code>clad-col-xl-*</code> - Extra large devices (large
+                desktops, 1200px and up)
+              </li>
+            </ul>
+
+            <div class="component-demo">
+              <div class="clad-row">
+                <div class="clad-col-12 clad-col-md-8 clad-col-lg-6">
+                  <div class="clad-bg-light clad-p-3 clad-text-center">
+                    Responsive Column
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre><code>&lt;div class="clad-row"&gt;
+    &lt;div class="clad-col-12 clad-col-md-8 clad-col-lg-6"&gt;
+        Responsive Column
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+          <div class="section-divider"></div>
+
+          <section id="components">
+            <h2>Components</h2>
+            <p>
+              Clad provides a variety of components to help you build your
+              website quickly and efficiently.
+            </p>
+
+            <section id="buttons">
+              <h3>Buttons</h3>
+              <p>
+                Use Clad's custom button styles for actions in forms, dialogs,
+                and more.
+              </p>
+
+              <div class="component-demo">
+                <button class="clad-btn clad-btn-primary">Primary</button>
+                <button class="clad-btn clad-btn-secondary">Secondary</button>
+                <button class="clad-btn clad-btn-success">Success</button>
+                <button class="clad-btn clad-btn-danger">Danger</button>
+                <button class="clad-btn clad-btn-warning">Warning</button>
+                <button class="clad-btn clad-btn-info">Info</button>
+              </div>
+
+              <div class="code-block">
+                <pre><code>&lt;button class="clad-btn clad-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="clad-btn clad-btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="clad-btn clad-btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="clad-btn clad-btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="clad-btn clad-btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="clad-btn clad-btn-info"&gt;Info&lt;/button&gt;</code></pre>
+              </div>
+
+              <h4>Button Sizes</h4>
+              <div class="component-demo">
+                <button class="clad-btn clad-btn-primary clad-btn-lg">
+                  Large Button
+                </button>
+                <button class="clad-btn clad-btn-primary">
+                  Default Button
+                </button>
+                <button class="clad-btn clad-btn-primary clad-btn-sm">
+                  Small Button
+                </button>
+              </div>
+
+              <div class="code-block">
+                <pre><code>&lt;button class="clad-btn clad-btn-primary clad-btn-lg"&gt;Large Button&lt;/button&gt;
+&lt;button class="clad-btn clad-btn-primary"&gt;Default Button&lt;/button&gt;
+&lt;button class="clad-btn clad-btn-primary clad-btn-sm"&gt;Small Button&lt;/button&gt;</code></pre>
+              </div>
+            </section>
+
+            <section id="forms">
+              <h3>Forms</h3>
+              <p>
+                Clad provides styles for form controls, layout options, and
+                custom components.
+              </p>
+
+              <div class="component-demo">
+                <form>
+                  <div class="clad-form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input
+                      type="email"
+                      class="clad-form-control"
+                      id="exampleInputEmail1"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div class="clad-form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      class="clad-form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="clad-form-group clad-form-check">
+                    <input
+                      type="checkbox"
+                      class="clad-form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="clad-form-check-label" for="exampleCheck1"
+                      >Check me out</label
+                    >
+                  </div>
+                  <button type="submit" class="clad-btn clad-btn-primary">
+                    Submit
+                  </button>
+                </form>
+              </div>
+
+              <div class="code-block">
+                <pre><code>&lt;form&gt;
+    &lt;div class="clad-form-group"&gt;
+        &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" class="clad-form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;
+    &lt;/div&gt;
+    &lt;div class="clad-form-group"&gt;
+        &lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+        &lt;input type="password" class="clad-form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;div class="clad-form-group clad-form-check"&gt;
+        &lt;input type="checkbox" class="clad-form-check-input" id="exampleCheck1"&gt;
+        &lt;label class="clad-form-check-label" for="exampleCheck1"&gt;Check me out&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="clad-btn clad-btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+
+              <h4>Inline Form</h4>
+              <div class="component-demo">
+                <form class="clad-form-inline">
+                  <div class="clad-form-group clad-mr-3">
+                    <label for="inlineFormInputName2" class="clad-sr-only"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="clad-form-control clad-mb-2 clad-mr-sm-2"
+                      id="inlineFormInputName2"
+                      placeholder="Jane Doe"
+                    />
+                  </div>
+                  <div class="clad-form-group clad-mr-3">
+                    <label
+                      for="inlineFormInputGroupUsername2"
+                      class="clad-sr-only"
+                      >Username</label
+                    >
+                    <div class="clad-input-group clad-mb-2 clad-mr-sm-2">
+                      <div class="clad-input-group-prepend">
+                        <div class="clad-input-group-text">@</div>
+                      </div>
+                      <input
+                        type="text"
+                        class="clad-form-control"
+                        id="inlineFormInputGroupUsername2"
+                        placeholder="Username"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="clad-btn clad-btn-primary clad-mb-2"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+
+              <div class="code-block">
+                <pre><code>&lt;form class="clad-form-inline"&gt;
+    &lt;div class="clad-form-group clad-mr-3"&gt;
+        &lt;label for="inlineFormInputName2" class="clad-sr-only"&gt;Name&lt;/label&gt;
+        &lt;input type="text" class="clad-form-control clad-mb-2 clad-mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe"&gt;
+    &lt;/div&gt;
+    &lt;div class="clad-form-group clad-mr-3"&gt;
+        &lt;label for="inlineFormInputGroupUsername2" class="clad-sr-only"&gt;Username&lt;/label&gt;
+        &lt;div class="clad-input-group clad-mb-2 clad-mr-sm-2"&gt;
+            &lt;div class="clad-input-group-prepend"&gt;
+                &lt;div class="clad-input-group-text"&gt;@&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;input type="text" class="clad-form-control" id="inlineFormInputGroupUsername2" placeholder="Username"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="clad-btn clad-btn-primary clad-mb-2"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+            </section>
+
+            <section id="cards">
+              <h3>Cards</h3>
+              <p>
+                Clad's cards provide a flexible and extensible content container
+                with multiple variants and options.
+              </p>
+
+              <div class="component-demo">
+                <div class="clad-card" style="width: 18rem">
+                  <img
+                    src="https://via.placeholder.com/300x200"
+                    class="clad-card-img-top"
+                    alt="Card image cap"
+                  />
+                  <div class="clad-card-body">
+                    <h5 class="clad-card-title">Card title</h5>
+                    <p class="clad-card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="clad-btn clad-btn-primary"
+                      >Go somewhere</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="code-block">
+                <pre><code>&lt;div class="clad-card" style="width: 18rem;"&gt;
+    &lt;img src="..." class="clad-card-img-top" alt="Card image cap"&gt;
+    &lt;div class="clad-card-body"&gt;
+        &lt;h5 class="clad-card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="clad-card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+        &lt;a href="#" class="clad-btn clad-btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </section>
+
+            <section id="alerts">
+              <h3>Alerts</h3>
+              <p>
+                Provide contextual feedback messages for typical user actions
+                with the handful of available and flexible alert messages.
+              </p>
+
+              <div class="component-demo">
+                <div class="clad-alert clad-alert-primary" role="alert">
+                  This is a primary alert—check it out!
+                </div>
+                <div class="clad-alert clad-alert-secondary" role="alert">
+                  This is a secondary alert—check it out!
+                </div>
+                <div class="clad-alert clad-alert-success" role="alert">
+                  This is a success alert—check it out!
+                </div>
+                <div class="clad-alert clad-alert-danger" role="alert">
+                  This is a danger alert—check it out!
+                </div>
+                <div class="clad-alert clad-alert-warning" role="alert">
+                  This is a warning alert—check it out!
+                </div>
+                <div class="clad-alert clad-alert-info" role="alert">
+                  This is a info alert—check it out!
+                </div>
+              </div>
+
+              <div class="code-block">
+                <pre><code>&lt;div class="clad-alert clad-alert-primary" role="alert"&gt;
+    This is a primary alert—check it out!
+&lt;/div&gt;
+&lt;div class="clad-alert clad-alert-secondary" role="alert"&gt;
+    This is a secondary alert—check it out!
+&lt;/div&gt;
+&lt;div class="clad-alert clad-alert-success" role="alert"&gt;
+    This is a success alert—check it out!
+&lt;/div&gt;
+&lt;div class="clad-alert clad-alert-danger" role="alert"&gt;
+    This is a danger alert—check it out!
+&lt;/div&gt;
+&lt;div class="clad-alert clad-alert-warning" role="alert"&gt;
+    This is a warning alert—check it out!
+&lt;/div&gt;
+&lt;div class="clad-alert clad-alert-info" role="alert"&gt;
+    This is a info alert—check it out!
+&lt;/div&gt;</code></pre>
+              </div>
+            </section>
+          </section>
+
+          <div class="section-divider"></div>
+
+          <section id="utilities">
+            <h2>Utilities</h2>
+            <p>
+              Clad provides a wide range of utility classes to help you build
+              your layouts and style your content quickly.
+            </p>
+
+            <h3>Spacing</h3>
+            <p>
+              Clad includes a wide range of shorthand responsive margin and
+              padding utility classes to modify an element's appearance.
+            </p>
+
+            <div class="component-demo">
+              <div class="clad-bg-light clad-p-3 clad-m-3">
+                This element has both padding and margin.
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre><code>&lt;div class="clad-bg-light clad-p-3 clad-m-3"&gt;
+    This element has both padding and margin.
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <p>
+              The classes are named using the format:
+              <code>{property}{sides}-{size}</code>
+            </p>
+            <ul>
+              <li><code>m</code> - for classes that set margin</li>
+              <li><code>p</code> - for classes that set padding</li>
+            </ul>
+            <p>Where sides is one of:</p>
+            <ul>
+              <li>
+                <code>t</code> - for classes that set margin-top or padding-top
+              </li>
+              <li>
+                <code>b</code> - for classes that set margin-bottom or
+                padding-bottom
+              </li>
+              <li>
+                <code>l</code> - for classes that set margin-left or
+                padding-left
+              </li>
+              <li>
+                <code>r</code> - for classes that set margin-right or
+                padding-right
+              </li>
+              <li>
+                <code>x</code> - for classes that set both *-left and *-right
+              </li>
+              <li>
+                <code>y</code> - for classes that set both *-top and *-bottom
+              </li>
+            </ul>
+            <p>Where size is one of:</p>
+            <ul>
+              <li>
+                <code>0</code> - for classes that eliminate the margin or
+                padding by setting it to 0
+              </li>
+              <li>
+                <code>1</code> - (by default) for classes that set the margin or
+                padding to $spacer * .25
+              </li>
+              <li>
+                <code>2</code> - (by default) for classes that set the margin or
+                padding to $spacer * .5
+              </li>
+              <li>
+                <code>3</code> - (by default) for classes that set the margin or
+                padding to $spacer
+              </li>
+              <li>
+                <code>4</code> - (by default) for classes that set the margin or
+                padding to $spacer * 1.5
+              </li>
+              <li>
+                <code>5</code> - (by default) for classes that set the margin or
+                padding to $spacer * 3
+              </li>
+            </ul>
+
+            <h3>Colors</h3>
+            <p>
+              Convey meaning through color with a handful of color utility
+              classes.
+            </p>
+
+            <div class="component-demo">
+              <p class="clad-text-primary">.clad-text-primary</p>
+              <p class="clad-text-secondary">.clad-text-secondary</p>
+              <p class="clad-text-success">.clad-text-success</p>
+              <p class="clad-text-danger">.clad-text-danger</p>
+              <p class="clad-text-warning">.clad-text-warning</p>
+              <p class="clad-text-info">.clad-text-info</p>
+              <p class="clad-text-light clad-bg-dark">.clad-text-light</p>
+              <p class="clad-text-dark">.clad-text-dark</p>
+            </div>
+
+            <div class="code-block">
+              <pre><code>&lt;p class="clad-text-primary"&gt;.clad-text-primary&lt;/p&gt;
+&lt;p class="clad-text-secondary"&gt;.clad-text-secondary&lt;/p&gt;
+&lt;p class="clad-text-success"&gt;.clad-text-success&lt;/p&gt;
+&lt;p class="clad-text-danger"&gt;.clad-text-danger&lt;/p&gt;
+&lt;p class="clad-text-warning"&gt;.clad-text-warning&lt;/p&gt;
+&lt;p class="clad-text-info"&gt;.clad-text-info&lt;/p&gt;
+&lt;p class="clad-text-light clad-bg-dark"&gt;.clad-text-light&lt;/p&gt;
+&lt;p class="clad-text-dark"&gt;.clad-text-dark&lt;/p&gt;</code></pre>
+            </div>
+
+            <h3>Display</h3>
+            <p>
+              Quickly and responsively toggle the display value of components
+              and more with our display utilities.
+            </p>
+
+            <div class="component-demo">
+              <div
+                class="clad-d-inline clad-p-2 clad-bg-primary clad-text-white"
+              >
+                d-inline
+              </div>
+              <div class="clad-d-inline clad-p-2 clad-bg-dark clad-text-white">
+                d-inline
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre><code>&lt;div class="clad-d-inline clad-p-2 clad-bg-primary clad-text-white"&gt;d-inline&lt;/div&gt;
+&lt;div class="clad-d-inline clad-p-2 clad-bg-dark clad-text-white"&gt;d-inline&lt;/div&gt;</code></pre>
+            </div>
+
+            <h3>Flexbox</h3>
+            <p>
+              Quickly manage the layout, alignment, and sizing of grid columns,
+              navigation, components, and more with a full suite of responsive
+              flexbox utilities.
+            </p>
+
+            <div class="component-demo">
+              <div class="clad-d-flex clad-p-2 clad-bg-light">
+                <div class="clad-p-2 clad-bg-primary clad-text-white">
+                  Flex item 1
+                </div>
+                <div class="clad-p-2 clad-bg-secondary clad-text-white">
+                  Flex item 2
+                </div>
+                <div class="clad-p-2 clad-bg-success clad-text-white">
+                  Flex item 3
+                </div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre><code>&lt;div class="clad-d-flex clad-p-2 clad-bg-light"&gt;
+    &lt;div class="clad-p-2 clad-bg-primary clad-text-white"&gt;Flex item 1&lt;/div&gt;
+    &lt;div class="clad-p-2 clad-bg-secondary clad-text-white"&gt;Flex item 2&lt;/div&gt;
+    &lt;div class="clad-p-2 clad-bg-success clad-text-white"&gt;Flex item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <h3>Responsive Utilities</h3>
+            <p>
+              Clad provides responsive utility classes for display, flexbox, and
+              more.
+            </p>
+
+            <div class="component-demo">
+              <div
+                class="clad-d-none clad-d-md-block clad-bg-info clad-p-2 clad-text-white"
+              >
+                Visible on medium and larger screens
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre><code>&lt;div class="clad-d-none clad-d-md-block clad-bg-info clad-p-2 clad-text-white"&gt;
+    Visible on medium and larger screens
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+          <div class="section-divider"></div>
+
+          <section id="customization">
+            <h2>Customization</h2>
+            <p>
+              Clad Framework is designed to be easily customizable. Here are
+              some ways you can customize the framework to fit your project's
+              needs:
+            </p>
+
+            <h3>1. Custom CSS</h3>
+            <p>
+              You can override Clad's default styles by adding your own CSS file
+              after the Clad stylesheet:
+            </p>
+
+            <div class="code-block">
+              <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/clad-framework/dist/clad.min.css"&gt;
+&lt;link rel="stylesheet" href="path/to/your/custom-styles.css"&gt;</code></pre>
+            </div>
+
+            <h3>2. Sass Variables</h3>
+            <p>
+              If you're using Sass, you can customize Clad by modifying its
+              variables before importing the framework:
+            </p>
+
+            <div class="code-block">
+              <pre><code>// Custom variables
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Import Clad
+@import "path/to/clad/scss/clad";</code></pre>
+            </div>
+
+            <h3>3. Custom Components</h3>
+            <p>
+              You can create custom components by combining existing Clad
+              classes or by creating new classes that follow Clad's naming
+              conventions:
+            </p>
+
+            <div class="component-demo">
+              <div class="clad-card clad-bg-light clad-p-3 custom-card">
+                <h4 class="clad-card-title">Custom Card</h4>
+                <p class="clad-card-text">
+                  This is a custom card component using Clad classes.
+                </p>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <pre><code>&lt;div class="clad-card clad-bg-light clad-p-3 custom-card"&gt;
+    &lt;h4 class="clad-card-title"&gt;Custom Card&lt;/h4&gt;
+    &lt;p class="clad-card-text"&gt;This is a custom card component using Clad classes.&lt;/p&gt;
+&lt;/div&gt;
+
+/* Custom CSS */
+.custom-card {
+    border-left: 4px solid #007bff;
+    transition: transform 0.3s ease-in-out;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+}</code></pre>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="clad-bg-dark clad-text-light clad-py-4 clad-mt-5 clad-pl-2 clad-pr-2">
+      <div class="clad-container">
+        <div class="clad-row">
+          <div class="clad-col-md-6">
+            <h5>Clad Framework</h5>
+            <p>
+              A powerful, flexible, and lightweight CSS framework for modern web
+              development.
+            </p>
+          </div>
+          <div class="clad-col-md-3">
+            <h5>Links</h5>
+            <ul class="clad-nav clad-flex-column">
+              <li class="clad-nav-item">
+                <a href="#" class="clad-nav-link clad-text-light">Home</a>
+              </li>
+              <li class="clad-nav-item">
+                <a href="#" class="clad-nav-link clad-text-light"
+                  >Documentation</a
+                >
+              </li>
+              <li class="clad-nav-item">
+                <a href="#" class="clad-nav-link clad-text-light">GitHub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="clad-col-md-3">
+            <h5>Connect</h5>
+            <ul class="clad-nav clad-flex-column">
+              <li class="clad-nav-item">
+                <a href="#" class="clad-nav-link clad-text-light">Twitter</a>
+              </li>
+              <li class="clad-nav-item">
+                <a href="#" class="clad-nav-link clad-text-light">Discord</a>
+              </li>
+              <li class="clad-nav-item">
+                <a href="#" class="clad-nav-link clad-text-light">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="clad-my-4" />
+        <p class="clad-text-center">
+          &copy; 2024 Clad Framework. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+        <script src="script.js"></script>
+</html>
